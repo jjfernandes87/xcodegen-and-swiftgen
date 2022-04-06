@@ -8,6 +8,7 @@ name: FinanceApp
 
 # Configuracoes de compilacao
 settings: 
+  MARKETING_VERSION: "1.0.0"
   SWIFT_VERSION: 5.0
   VERSIONING_SYSTEM: "apple-generic"
   CODE_SIGN_IDENTITY: "iPhone Developer"
@@ -15,9 +16,9 @@ settings:
   ARCHS: $(ARCHS_STANDARD)
 
 options:
-  xcodeVersion: "13.0" # Versao de compilacao do nosso app
+  xcodeVersion: "13.2" # Versao de compilacao do nosso app
   deploymentTarget:
-    iOS: "12.4" # Base target do nosso app
+    iOS: "13.0" # Base target do nosso app
 
 # definicao do target do projeto e testes
 targets: 
