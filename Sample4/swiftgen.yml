@@ -1,0 +1,13 @@
+strings:
+  inputs: FinanceApp/Resources/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      params:
+        enumName: Localization
+      output: FinanceApp/Resources/Generated/Strings.swift
+xcassets:
+  inputs:
+    - FinanceApp/Resources/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: FinanceApp/Resources/Generated/Images.swift

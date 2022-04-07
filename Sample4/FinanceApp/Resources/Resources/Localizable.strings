@@ -1,0 +1,23 @@
+// MARK: Generic
+
+"Generic.DefaultConfiguration" = "Default Configuration";
+"Generic.FatalError" = "init(coder:) has not been implemented";
+
+// MARK: Components
+
+"Components.ActivityCellView.activityNameLabel" = "Mall";
+"Components.ActivityCellView.activityInfoLabel" = "$100.00 • 8:56 AM";
+
+"Components.UserProfileHeaderView.nameLabel" = "User Name";
+"Components.UserProfileHeaderView.agencyLabel" = "Agency 0001";
+"Components.UserProfileHeaderView.accountLabel" = "Account 123456-7";
+"Components.UserProfileHeaderView.bankLabel" = "Devpass Bank";
+
+"Components.TabBarController.Home" = "Home";
+"Components.TabBarController.Transfers" = "Transfers";
+
+"Components.HomeHeaderView.label" = "$15,459.27";
+"Components.HomeHeaderView.savingsLabel" = "Savings";
+"Components.HomeHeaderView.savingsValueLabel" = "$100.00";
+"Components.HomeHeaderView.spendingLabel" = "Spending";
+"Components.HomeHeaderView.spendingValueLabel" = "$100.00";
