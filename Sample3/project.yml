@@ -16,21 +16,30 @@ settings:
   ARCHS: $(ARCHS_STANDARD)
 
 options:
-  xcodeVersion: "13.2" # Versao de compilacao do nosso app
+  bundleIdPrefix: com.devpass.
+  xcodeVersion: "13.2"
   deploymentTarget:
-    iOS: "13.0" # Base target do nosso app
+    iOS: "13.0"
 
-# definicao do target do projeto e testes
+packages:
+  Alamofire:
+    url: https://github.com/Alamofire/Alamofire.git
+    branch: master
+
 targets: 
+
   FinanceApp:
     platform: iOS
     type: application
-
+    
     sources:
       - path: FinanceApp
     
+    dependencies:
+      - target: Service
+    
     settings:
-      PRODUCT_BUNDLE_IDENTIFIER: com.devpass.FinanceApp
+      PRODUCT_BUNDLE_IDENTIFIER: FinanceApp
       INFOPLIST_FILE: FinanceApp/Resources/Info.plist
       CODE_SIGN_STYLE: "Manual"
       DEVELOPMENT_TEAM: ""
@@ -46,6 +55,13 @@ targets:
     dependencies:
       - target: FinanceApp
 
+  # Adicionando novos targets para framework
+  Service:
+    templates: # criamos um configuracao base para reutilizacao de frameworks
+      - Framework
+    dependencies:
+      - package: Alamofire
+    
 #  definicao do scheme do projeto
 schemes:
   FinanceApp:
@@ -63,3 +79,13 @@ schemes:
         - FinanceApp
       targets:
         - FinanceAppTests
+
+# Template base para frameworks
+targetTemplates:
+  Framework:
+    platform: iOS
+    type: framework
+    sources: 
+      - path: ${target_name}
+    info:
+      path: ${target_name}/Info.plist

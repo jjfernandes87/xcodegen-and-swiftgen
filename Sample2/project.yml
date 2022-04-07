@@ -16,18 +16,26 @@ settings:
   ARCHS: $(ARCHS_STANDARD)
 
 options:
-  xcodeVersion: "13.2" # Versao de compilacao do nosso app
+  xcodeVersion: "13.2"
   deploymentTarget:
-    iOS: "13.0" # Base target do nosso app
+    iOS: "13.0"
 
-# definicao do target do projeto e testes
+packages:
+  Alamofire:
+    url: https://github.com/Alamofire/Alamofire.git
+    branch: master
+
 targets: 
+
   FinanceApp:
     platform: iOS
     type: application
-
+    
     sources:
       - path: FinanceApp
+    
+    dependencies:
+      - package: Alamofire
     
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.devpass.FinanceApp
