@@ -55,8 +55,10 @@ extension TransfersViewController: TransferViewDelegate {
 
 extension TransfersViewController: TransfersPresenterDelegate {
     func showData(transfer: TransfersEntity) {
-        let imageName = transfer.success ? "checkmark.circle.fill" : "x.circle.fill"
-        let message = transfer.success ? "Your transfer was successful" : "Something went wrong :("
+        let transferSuccess = Localization.Modules.TransfersViewController.Transfer.success
+        let transferError = Localization.Modules.TransfersViewController.Transfer.error
+        let imageName = transfer.success ? Asset.checkmarkCircleFill.name : Asset.xCircleFill.name
+        let message = transfer.success ? transferSuccess : transferError
         let confirmation = ConfirmationEntity(success: true, imageName: imageName, message: message)
         presenter.navigateToConfirmation(confirmation: confirmation)
     }

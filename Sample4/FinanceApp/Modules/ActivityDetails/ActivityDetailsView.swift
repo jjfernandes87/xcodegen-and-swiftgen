@@ -22,7 +22,7 @@ final class ActivityDetailsView: UIView {
     let imageView: UIImageView = {
 
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "bag.circle.fill")
+        imageView.image = Asset.bagCircleFill.image
         imageView.layer.cornerRadius = 50
         imageView.clipsToBounds = true
         return imageView
@@ -30,7 +30,7 @@ final class ActivityDetailsView: UIView {
 
     let activityNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Mall"
+        label.text = Localization.Components.ActivityDetailsView.activityNameLabel
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 17)
         return label
@@ -38,7 +38,7 @@ final class ActivityDetailsView: UIView {
 
     let categoryLabel: UILabel = {
         let label = UILabel()
-        label.text = "Shopping"
+        label.text = Localization.Components.ActivityDetailsView.categoryLabel
         label.textAlignment = .center
         return label
     }()
@@ -51,7 +51,7 @@ final class ActivityDetailsView: UIView {
     let priceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "$100"
+        label.text = Localization.Components.ActivityDetailsView.priceLabel
         label.font = UIFont.boldSystemFont(ofSize: 34)
         return label
     }()
@@ -59,14 +59,14 @@ final class ActivityDetailsView: UIView {
     let timeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "8:57 AM"
+        label.text = Localization.Components.ActivityDetailsView.timeLabel
         return label
     }()
 
     let reportIssueButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Report a issue", for: .normal)
+        button.setTitle(Localization.Components.ActivityDetailsView.reportIssueButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 14

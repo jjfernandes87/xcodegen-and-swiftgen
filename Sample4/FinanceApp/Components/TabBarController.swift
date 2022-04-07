@@ -18,13 +18,13 @@ class TabBarController: UITabBarController {
         let homeTitle = Localization.Components.TabBarController.home
         let homeViewController = HomeRouter.createModule()
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
-        let homeTabBar = UITabBarItem(title: homeTitle, image: UIImage(named: "house.fill"), tag: 0)
+        let homeTabBar = UITabBarItem(title: homeTitle, image: Asset.houseFill.image, tag: 0)
         homeNavigationController.tabBarItem = homeTabBar
 
         let transfersTitle = Localization.Components.TabBarController.transfers
 		let transfersViewController = TransfersRouter.createModule()
 		let transfersNavigationController = UINavigationController(rootViewController: transfersViewController)
-		let transfersTabBar = UITabBarItem(title: transfersTitle, image: UIImage(named: "arrow.up.arrow.down"), tag: 1)
+        let transfersTabBar = UITabBarItem(title: transfersTitle, image: Asset.arrowUpArrowDown.image, tag: 1)
 		transfersNavigationController.tabBarItem = transfersTabBar
 		
 		self.viewControllers = [homeNavigationController, transfersNavigationController]

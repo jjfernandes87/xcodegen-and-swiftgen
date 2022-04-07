@@ -32,7 +32,7 @@ final class ContactCellView: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
         imageView.layer.masksToBounds = true
-        imageView.image = UIImage(named: "avatar-placeholder")
+        imageView.image = Asset.avatarPlaceholder.image
         return imageView
     }()
 
@@ -64,7 +64,7 @@ final class ContactCellView: UITableViewCell {
     }
 
     override func prepareForReuse() {
-        avatarImageView.image = UIImage(named: "avatar-placeholder")
+        avatarImageView.image = Asset.avatarPlaceholder.image
         contactNameLabel.text = ""
         contactPhoneLabel.text = ""
     }

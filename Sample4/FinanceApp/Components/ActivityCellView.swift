@@ -32,7 +32,7 @@ class ActivityCellView: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
         imageView.layer.masksToBounds = true
-        imageView.image = UIImage(named: "bag.circle.fill")
+        imageView.image = Asset.bagCircleFill.image
         imageView.tintColor = .systemPurple
         return imageView
     }()

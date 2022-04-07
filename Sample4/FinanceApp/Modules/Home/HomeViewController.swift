@@ -35,7 +35,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         presenter.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(openProfile))
+        let rightButton = Localization.Modules.HomeViewController.rightBarButtonItem
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: rightButton, style: .plain, target: self, action: #selector(openProfile))
     }
 
     override func loadView() {

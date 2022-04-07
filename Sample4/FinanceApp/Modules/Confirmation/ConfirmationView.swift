@@ -52,7 +52,7 @@ final class ConfirmationView: UIView {
 
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Nice!", for: .normal)
+        button.setTitle(Localization.Components.ConfirmationView.confirmationButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 14

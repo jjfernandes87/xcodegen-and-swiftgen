@@ -21,3 +21,23 @@
 "Components.HomeHeaderView.savingsValueLabel" = "$100.00";
 "Components.HomeHeaderView.spendingLabel" = "Spending";
 "Components.HomeHeaderView.spendingValueLabel" = "$100.00";
+
+"Components.ActivityDetailsView.activityNameLabel" = "Mall";
+"Components.ActivityDetailsView.categoryLabel" = "Shopping";
+"Components.ActivityDetailsView.priceLabel" = "$100";
+"Components.ActivityDetailsView.timeLabel" = "8:57 AM";
+"Components.ActivityDetailsView.reportIssueButton" = "Report a issue";
+
+"Components.ConfirmationView.confirmationButton" = "Nice!";
+
+"Components.TransfersView.amountTextField" = "$0";
+"Components.TransfersView.chooseContactButton" = "Choose contact";
+"Components.TransfersView.transferButton" = "Transfer";
+
+// MARK: Modules
+
+"Modules.HomeViewController.rightBarButtonItem" = "Profile";
+"Modules.ContactListViewController.titleView" = "Contact list";
+
+"Modules.TransfersViewController.transfer.success" = "Your transfer was successful";
+"Modules.TransfersViewController.transfer.error" = "Something went wrong :(";

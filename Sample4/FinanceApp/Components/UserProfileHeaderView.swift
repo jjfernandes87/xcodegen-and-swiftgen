@@ -21,7 +21,7 @@ class UserProfileHeaderView: UIView {
 
     let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "avatar-placeholder")
+        imageView.image = Asset.avatarPlaceholder.image
         imageView.layer.cornerRadius = 50
         imageView.clipsToBounds = true
         return imageView
